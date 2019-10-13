@@ -1,0 +1,22 @@
+import torch
+import torch.nn as nn
+from PIL import Image
+import numpy as np
+import argparse
+
+def parse_opts():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", default='input', type = str , help='Input file path')
+    parser.add_argument("--rootpath", default='', type = str, help="root path of input")
+    parser.add_argument("--model", default='', type = str, help = "model file path")
+    parser.add_argument("--batch_size", default=32, type = int ,help="batch size")
+    parser.add_argument("--model_depth", default=34, type = int , help = "depth of resnet (10|18|34|50|101)" )
+    parser.set_defaults(verbose=False)
+    parser.add_argument("--verbose", action="store_true", help="")
+    parser.set_defaults(verbose=False)
+
+    args = parser.parse_args()
+
+    return args
+
+
