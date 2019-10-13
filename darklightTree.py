@@ -19,7 +19,7 @@ def createTree(patientTree, patientId):
     patientTree.rightChild.leftChild = BinaryTree (list3)
     patientTree.rightChild.rightChild = BinaryTree (list4)
 def build_tree(patientTree, light , eyetype, line):
-    print(eyetype,light, patientTree.key)
+    # print(eyetype,light, patientTree.key)
     # point = None
     # if eyetype == "L":
     #     print("left")
@@ -56,7 +56,7 @@ class create_pairs():
         f2 = open("I:/asoct/eyeId.txt", "a")
         patientIdlist = []
         for line in f.readlines():
-            # print(line)
+            print(line)
             # self.personID = line.split("-")[0]+"-"+line.split("-")[1]
             # self.lightType = line.split("-")[2].split("_")[0]
             # self.patientDate = line.split("_")[1]+"_"+line.split("_")[2]
@@ -79,15 +79,15 @@ class create_pairs():
             # if patientId+eyeType not in patientIdlist:
             #     patientIdlist.append(patientId+eyeType)
             #     f2.writelines(patientId+eyeType+"\n")
-            print(eyeId)
+            # print(eyeId)
 
 
 
             ####
-            if self.dicts[patientId] != []:
-                print("already built")
+            # if self.dicts[patientId] != []:
+            #     print("already built")
 
-            elif self.dicts[patientId] == []:
+            if self.dicts[patientId] == []:
                 inits =  patientId
                 self.dicts[patientId] = BinaryTree(inits) ###
                 createTree(self.dicts[patientId], patientId)
@@ -106,14 +106,14 @@ class create_pairs():
             # print(deviceType)
             # print(volumeIndex)
             # print(scanType)
-        print(len(patientIdlist))
-if __name__ == '__main__':
-    path = "I:/octdata/val.txt"
-    create_pair = create_pairs(path)
-    create_pair.generateInfo()
-    # print(create_pair.dicts["CS-218_20190614_154507"].leftChild.leftChild.key)
-    # print(create_pair.dicts["CS-218"].rightChild.leftChild.key[:10])
-    print(len(create_pair.dicts["CS-176"].rightChild.leftChild.key))
-    print(create_pair.dicts["CS-176"].rightChild.leftChild.key)
-    print(create_pair.dicts["CS-176"].rightChild.rightChild.key)
-    # print(create_pair.dicts["CS-218"].rightChild.leftChild.key[:10])
+        # print(len(patientIdlist))
+# if __name__ == '__main__':
+#     path = "I:/octdata/val.txt"
+#     create_pair = create_pairs(path)
+#     create_pair.generateInfo()
+#     # print(create_pair.dicts["CS-218_20190614_154507"].leftChild.leftChild.key)
+#     # print(create_pair.dicts["CS-218"].rightChild.leftChild.key[:10])
+#     print(len(create_pair.dicts["CS-176"].rightChild.leftChild.key))
+#     print(create_pair.dicts["CS-176"].rightChild.leftChild.key)
+#     print(create_pair.dicts["CS-176"].rightChild.rightChild.key)
+#     # print(create_pair.dicts["CS-218"].rightChild.leftChild.key[:10])
